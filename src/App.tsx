@@ -103,6 +103,7 @@ const DEFAULT_SETTINGS: SchoolSettings = {
   nipKepalaSekolah: '197508241999031005',
   logoSekolah: '',
   kopSekolah: '',
+  kotaSekolah: 'Kota Pintar',
 };
 
 export default function App() {

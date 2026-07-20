@@ -24,6 +24,7 @@ export interface SchoolSettings {
   logoSekolah: string; // Base64 data URL
   kopSekolah: string; // Base64 data URL
   appsScriptUrl?: string; // Google Apps Script Web App URL for automatic passwordless sync
+  kotaSekolah?: string; // Kota/Kabupaten
 }
 
 export interface GoogleUser {

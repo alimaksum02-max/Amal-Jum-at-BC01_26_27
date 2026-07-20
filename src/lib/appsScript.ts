@@ -62,8 +62,10 @@ export async function fetchFromAppsScript(url: string): Promise<{
   const settings: Partial<SchoolSettings> = {};
   if (Array.isArray(data.settings)) {
     data.settings.forEach((item: any) => {
-      if (item.Key) {
-        (settings as any)[item.Key] = item.Value;
+      const key = item.Key || item.Kunci;
+      const value = item.Value !== undefined ? item.Value : item.Nilai;
+      if (key) {
+        (settings as any)[key] = value;
       }
     });
   } else if (data.settings && typeof data.settings === 'object') {
